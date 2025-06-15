@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    </head>
+<body>
+    <header>
+        <div class="naglowek-tresc">
+            <a href="index.html" class="logo">
+                <img src="logo.jpg" alt="Logo Żużel">
+                <h1>Żużel</h1>
+            </a>
+            <nav id="nawigacja-glowna">
+                <ul class="menu-nawigacyjne">
+                    <li><a href="index.html">Strona Główna</a></li>
+                    <li class="rozwin">
+                        <a href="#" class="przycisk-rozwin">Co to jest Żużel? <i class="fas fa-caret-down"></i></a>
+                        <div class="tresc-rozwinieta">
+                            <a href="historia.html">Historia</a>
+                            <a href="zasady.html">Zasady</a>
+                            <a href="sprzet.html">Sprzęt</a>
+                            <a href="tor.html">Tor Żużlowy</a>
+                        </div>
+                    </li>
+                    <li class="rozwin">
+                        <a href="#" class="przycisk-rozwin">Zawodnicy <i class="fas fa-caret-down"></i></a>
+                        <div class="tresc-rozwinieta">
+                            <a href="najlepsi-zawodnicy.html">Najlepsi w Historii</a>
+                            <a href="aktywni-zawodnicy.html">Aktywni Zawodnicy</a>
+                            <div class="rozwin-podmenu">
+                                <a href="#" class="przycisk-rozwin-podmenu">Legendy Polskiego Żużla <i class="fas fa-caret-right"></i></a>
+                                <div class="tresc-podmenu">
+                                    <a href="tomasz-gollob.html">Tomasz Gollob</a>
+                                    <a href="jerzy-szczakiel.html">Jerzy Szczakiel</a>
+                                    <a href="bartosz-zmarzlik.html">Bartosz Zmarzlik</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="rozwin">
+                        <a href="#" class="przycisk-rozwin">Rozgrywki <i class="fas fa-caret-down"></i></a>
+                        <div class="tresc-rozwinieta">
+                            <a href="ekstraliga.html">PGE Ekstraliga</a>
+                            <a href="1-liga.html">1. Liga Żużlowa</a>
+                            <a href="grand-prix.html">Grand Prix</a>
+                            <a href="druzynowy-puchar-swiata.html">Drużynowy Puchar Świata</a>
+                        </div>
+                    </li>
+                    <li class="rozwin">
+                        <a href="#" class="przycisk-rozwin">Kluby <i class="fas fa-caret-down"></i></a>
+                        <div class="tresc-rozwinieta">
+                            <a href="rzeszow.html">Texom Stal Rzeszów</a>
+                        </div>
+                    </li>
+                    <li><a href="aktualnosci.html">Aktualności</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+                <button class="hamburger" aria-label="Otwórz menu nawigacyjne">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="sekcja-tresci">
+            <div class="kontener">
+                <h2>Skontaktuj się z Nami!</h2>
+                <p>Masz pytania, sugestie, a może chcesz podzielić się swoją pasją do żużla? Skontaktuj się z nami! Odpowiemy tak szybko, jak to możliwe.</p>
+
+                <div class="siatka-kontaktu">
+                    <div class="kolumna-kontaktowa animate-on-scroll">
+                        <h3>Formularz Kontaktowy</h3>
+                        <form class="formularz-kontaktowy" action="#" method="POST">
+                            <div class="grupa-formularza">
+                                <label for="imie">Imię i Nazwisko:</label>
+                                <input type="text" id="imie" name="imie" required>
+                            </div>
+                            <div class="grupa-formularza">
+                                <label for="email">Adres E-mail:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="grupa-formularza">
+                                <label for="wiadomosc">Twoja Wiadomość:</label>
+                                <textarea id="wiadomosc" name="wiadomosc" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="przycisk">Wyślij Wiadomość</button>
+                        </form>
+                    </div>
+
+                    <div class="kolumna-kontaktowa animate-on-scroll">
+                        <h3>Dane Kontaktowe</h3>
+                        <p>Jeśli wolisz tradycyjne formy kontaktu, skorzystaj z poniższych danych:</p>
+                        <p><i class="fas fa-envelope"></i> E-mail: <a href="mailto:kontakt@zulzel-info.pl">kontakt@zulzel-info.pl</a></p>
+                        <p><i class="fas fa-phone"></i> Telefon: +48 123 456 789 (dostępny w godzinach 9:00-17:00 od poniedziałku do piątku)</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Adres: ul. Przykładowa 1, 00-001 Miasto, Polska</p>
+
+                        <h3>Znajdź Nas w Social Mediach</h3>
+                        <div class="linki-spolecznosciowe">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i> YouTube</a>
+                        </div>
+
+                        <h3 style="margin-top: 35px;">Nasza Lokalizacja</h3>
+                        <div class="mapa-kontaktu">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.855900977284!2d21.996590276632433!3d50.04692487151042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473cfa13cfc324c3%3A0xc39f993309a4734b!2sStadion%20Miejski%20Stal%20Rzesz%C3%B3w!5e0!3m2!1spl!2spl!4v1718451838640!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="kontener">
+            <div class="siatka-stopki">
+                <div class="kolumna-stopki">
+                    <h3>O Stronie</h3>
+                    <p>Twoje kompleksowe źródło wiedzy o żużlu. Znajdziesz tu wszystko, co musisz wiedzieć o tym fascynującym sporcie.</p>
+                </div>
+                <div class="kolumna-stopki">
+                    <h3>Szybkie Linki</h3>
+                    <ul>
+                        <li><a href="index.html">Strona Główna</a></li>
+                        <li><a href="aktualnosci.html">Aktualności</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                        <li><a href="polityka-prywatnosci.html">Polityka Prywatności</a></li>
+                    </ul>
+                </div>
+                <div class="kolumna-stopki">
+                    <h3>Śledź Nas</h3>
+                    <div class="linki-spolecznosciowe">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="stopka-dolna">
+                <p>&copy; 2025 Żużel </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
