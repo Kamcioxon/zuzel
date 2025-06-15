@@ -45,6 +45,66 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // NOWA FUNKCJONALNOŚĆ: Obsługa menu hamburger
+    const hamburgerButton = document.querySelector('.hamburger');
+    const nawigacjaGlowna = document.getElementById('nawigacja-glowna');
+    const menuNawigacyjne = nawigacjaGlowna.querySelector('.menu-nawigacyjne');
+
+    if (hamburgerButton && menuNawigacyjne) {
+        hamburgerButton.addEventListener('click', function() {
+            hamburgerButton.classList.toggle('aktywne');
+            menuNawigacyjne.classList.toggle('aktywne');
+            // Zamykamy otwarte podmenu, gdy główne menu jest zwijane
+            if (!menuNawigacyjne.classList.contains('aktywne')) {
+                const openDropdowns = menuNawigacyjne.querySelectorAll('.rozwin.otwarte, .rozwin-podmenu.otwarte');
+                openDropdowns.forEach(openDropdown => {
+                    openDropdown.classList.remove('otwarte');
+                });
+            }
+        });
+
+        // Zamknięcie menu po kliknięciu linku w menu mobilnym
+        const navLinks = menuNawigacyjne.querySelectorAll('a:not(.przycisk-rozwin):not(.przycisk-rozwin-podmenu)');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 992) { // Zamykaj tylko na tabletach i mniejszych
+                    hamburgerButton.classList.remove('aktywne');
+                    menuNawigacyjne.classList.remove('aktywne');
+                    const openDropdowns = menuNawigacyjne.querySelectorAll('.rozwin.otwarte, .rozwin-podmenu.otwarte');
+                    openDropdowns.forEach(openDropdown => {
+                        openDropdown.classList.remove('otwarte');
+                    });
+                }
+            });
+        });
+
+        // Zamknięcie menu po kliknięciu poza nim
+        document.addEventListener('click', function(event) {
+            if (window.innerWidth <= 992 && !nawigacjaGlowna.contains(event.target) && !hamburgerButton.contains(event.target)) {
+                if (menuNawigacyjne.classList.contains('aktywne')) {
+                    hamburgerButton.classList.remove('aktywne');
+                    menuNawigacyjne.classList.remove('aktywne');
+                    const openDropdowns = menuNawigacyjne.querySelectorAll('.rozwin.otwarte, .rozwin-podmenu.otwarte');
+                    openDropdowns.forEach(openDropdown => {
+                        openDropdown.classList.remove('otwarte');
+                    });
+                }
+            }
+        });
+
+        // Zamknięcie menu po zmianie rozmiaru okna, jeśli jest otwarte (np. przejście z mobilnego na desktop)
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 992 && menuNawigacyjne.classList.contains('aktywne')) {
+                hamburgerButton.classList.remove('aktywne');
+                menuNawigacyjne.classList.remove('aktywne');
+                const openDropdowns = menuNawigacyjne.querySelectorAll('.rozwin.otwarte, .rozwin-podmenu.otwarte');
+                openDropdowns.forEach(openDropdown => {
+                    openDropdown.classList.remove('otwarte');
+                });
+            }
+        });
+    }
+
     const sectionsToAnimate = document.querySelectorAll('.sekcja-tresci, .sekcja-polecane-artykuly, .sekcja-podglad-galerii');
 
     sectionsToAnimate.forEach(section => {

@@ -245,7 +245,7 @@ header {
     display: none;
     position: absolute;
     top: 0px;
-    left: 100px;
+    left: 100%; /* Zmieniono z 100px na 100% dla lepszej responsywności */
     background-color: var(--dark-bg);
     min-width: 240px;
     box-shadow: 0px 10px 25px var(--shadow-strong);
@@ -861,32 +861,7 @@ footer {
     color: var(--primary-color);
 }
 
-@media (max-width: 767px) {
-    .mapa-kontaktu {
-        height: 300px;
-    }
-}
-
-@media (max-width: 992px) {
-    .tresc-bohater h2 {
-        font-size: 56px;
-    }
-    .tresc-bohater p {
-        font-size: 26px;
-    }
-    .sekcja-tresci h2 {
-        font-size: 40px;
-    }
-    .siatka-artykulow, .siatka-galerii, .siatka-stopki {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-    .element-wiadomosci img {
-        width: 200px;
-        height: 150px;
-    }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 992px) { /* Punkt przerwania dla tabletów i mniejszych */
     header {
         padding: 15px 0px;
     }
@@ -1033,7 +1008,31 @@ footer {
     .element-wiadomosci div {
         padding: 20px;
     }
+
+    .mapa-kontaktu {
+        height: 300px;
+    }
 }
+
+@media (max-width: 767px) { /* Dodatkowe dostosowania dla mniejszych telefonów, poniżej tabletów */
+    .tresc-bohater h2 {
+        font-size: 38px;
+    }
+    .tresc-bohater p {
+        font-size: 18px;
+    }
+    .sekcja-tresci h2 {
+        font-size: 30px;
+    }
+    .siatka-artykulow, .siatka-galerii, .siatka-stopki {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .element-wiadomosci img {
+        width: 100%;
+        height: 180px;
+    }
+}
+
 
 @media (max-width: 480px) {
     .naglowek-tresc {
@@ -1059,20 +1058,20 @@ footer {
         top: 80px;
     }
     .tresc-bohater h2 {
-        font-size: 38px;
+        font-size: 32px;
     }
     .tresc-bohater p {
-        font-size: 18px;
+        font-size: 16px;
     }
     .przycisk {
         padding: 12px 25px;
         font-size: 16px;
     }
     .sekcja-tresci h2 {
-        font-size: 30px;
+        font-size: 28px;
     }
     .sekcja-tresci p {
-        font-size: 17px;
+        font-size: 16px;
     }
     .siatka-artykulow, .siatka-galerii, .siatka-stopki {
         grid-template-columns: 1fr;
@@ -1081,13 +1080,13 @@ footer {
         max-width: 100%;
     }
     .karta-artykulu h3 {
-        font-size: 22px;
-    }
-    .element-wiadomosci h3 {
         font-size: 20px;
     }
+    .element-wiadomosci h3 {
+        font-size: 18px;
+    }
     .element-wiadomosci p {
-        font-size: 15px;
+        font-size: 14px;
     }
     .kolumna-stopki {
         text-align: center;
@@ -1104,6 +1103,6 @@ footer {
         display: flex;
     }
     .linki-spolecznosciowe a {
-        margin: 0px 15px;
+        margin: 0px 10px;
     }
 }
